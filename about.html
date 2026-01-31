@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="About AC Services - Our team of certified professionals and commitment to transparency.">
+    <title>About Us - AC Services</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        :root {
+            --primary-sky-blue: #87CEEB;
+            --primary-sky-blue-dark: #5DADE2;
+            --primary-sky-blue-light: #E1F5FE;
+            --text-dark: #1e293b;
+            --text-grey: #64748b;
+            --bg-white: #ffffff;
+            --bg-light: #F0F8FF;
+            --border-radius-xl: 24px;
+            --shadow-lg: 0 10px 30px rgba(135, 206, 235, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            padding: 20px 0;
+            background: white !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-icon {
+            color: var(--primary-sky-blue);
+            font-size: 28px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-dark);
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-sky-blue);
+        }
+
+        /* Hero */
+        .page-hero {
+            padding: 100px 0 60px;
+            background: linear-gradient(180deg, var(--primary-sky-blue-light) 0%, #fff 100%);
+            text-align: center;
+        }
+
+        .hero-label {
+            color: var(--primary-sky-blue-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        /* Silent Confidence Section */
+        .confidence-section {
+            padding: 80px 0;
+        }
+
+        .confidence-card {
+            border: none;
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: var(--border-radius-xl);
+            height: 100%;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .confidence-card:hover {
+            transform: translateY(-10px);
+            background: white;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .confidence-icon {
+            font-size: 40px;
+            color: var(--primary-sky-blue);
+            margin-bottom: 20px;
+        }
+
+        .confidence-title {
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        /* Technician Identity Section */
+        .tech-identity-section {
+            padding: 80px 0;
+            background: #fafafa;
+        }
+
+        .tech-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--primary-sky-blue-light);
+        }
+
+        .tech-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-sky-blue-light);
+            color: var(--primary-sky-blue-dark);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        /* Smart AMC Visual */
+        .amc-visual-section {
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .circle-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-circle {
+            width: 180px;
+            height: 180px;
+            background: var(--primary-sky-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-weight: 800;
+            z-index: 2;
+            box-shadow: 0 0 40px rgba(135, 206, 235, 0.5);
+        }
+
+        .orbit-item {
+            position: absolute;
+            width: 140px;
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .orbit-1 {
+            top: 0;
+        }
+
+        .orbit-2 {
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .orbit-3 {
+            bottom: 0;
+        }
+
+        .orbit-4 {
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px 0 30px;
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-sky-blue);
+        }
+
+        @media (max-width: 768px) {
+            .circle-container {
+                transform: scale(0.7);
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container d-flex flex-column">
+            <div class="d-flex w-100 align-items-center justify-content-between">
+                <div class="brand-wrapper">
+                    <a class="navbar-brand mb-0 d-flex align-items-center" href="Homepage.html">
+                        <img src="cool me air.jpg" alt="Logo" class="brand-logo me-2">
+                        <span class="brand-text">MinervaAirConditioning</span>
+                    </a>
+                    <span class="brand-tagline">
+                        <span>R</span><span>E</span><span>L</span><span>I</span><span>A</span><span>B</span><span>L</span><span>E</span><span>&nbsp;</span>
+                        <span>A</span><span>C</span><span>&nbsp;</span>
+                        <span>I</span><span>N</span><span>S</span><span>T</span><span>A</span><span>L</span><span>L</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>&nbsp;</span>
+                        <span>&</span><span>&nbsp;</span>
+                        <span>M</span><span>A</span><span>I</span><span>N</span><span>T</span><span>E</span><span>N</span><span>A</span><span>N</span><span>C</span><span>E</span>
+                    </span>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Homepage.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">Why Choose Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Our Work</a>
+                        </li>
+                        <li class="nav-item ms-lg-3 d-flex align-items-center">
+                            <a href="contact.html" class="btn contact-btn">
+                                <i class="fas fa-phone-alt me-2"></i> Get AC Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="extra-info d-none d-lg-block">
+                📍 Serving your city 24/7 • Support: <a href="tel:6282822682"
+                    style="color: inherit; text-decoration: none;">6282822682</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="hero-label">Our Story</span>
+            <h1 class="hero-title">Professional. Transparent. <br> Locally Trusted.</h1>
+            <p class="text-secondary mx-auto" style="max-width: 600px;">We didn't just build a service; we built a
+                promise of reliable comfort for every home in our city.</p>
+        </div>
+    </section>
+
+    <!-- Silent Confidence Section -->
+    <section class="confidence-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="confidence-card">
+                        <i class="fas fa-tag confidence-icon"></i>
+                        <h3 class="confidence-title">Transparent Pricing</h3>
+                        <p class="text-secondary">No hidden fees. We provide a clear estimate before we even touch your
+                            AC.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="confidence-card">
+                        <i class="fas fa-shield-alt confidence-icon"></i>
+                        <h3 class="confidence-title">Genuine Spare Parts</h3>
+                        <p class="text-secondary">We only use original components that come with brand warranty.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="confidence-card">
+                        <i class="fas fa-check-double confidence-icon"></i>
+                        <h3 class="confidence-title">No Upselling</h3>
+                        <p class="text-secondary">We fix what is broken. No unnecessary replacements, ever.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technician Identity -->
+    <section class="tech-identity-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">The Hands Behind Your Comfort</h2>
+                    <p class="text-secondary mb-4">We believe expertise speaks louder than photos. Our team is
+                        hand-picked for their technical mastery and professional conduct.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="tech-badge"><i class="fas fa-certificate"></i> Brand Trained</div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="tech-badge"><i class="fas fa-clock"></i> 5+ Years Avg. Exp.</div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="tech-badge"><i class="fas fa-user-check"></i> Verified Background</div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="tech-badge"><i class="fas fa-tools"></i> Fully Equipped</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5">
+                    <div class="tech-card text-center">
+                        <i class="fas fa-user-shield mb-3" style="font-size: 60px; color: var(--primary-sky-blue);"></i>
+                        <h4 class="fw-bold">Certified Professional</h4>
+                        <p class="text-secondary small">This is the standard we maintain for every technician entering
+                            your home. No compromise on safety or skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart AMC Visual -->
+    <section class="amc-visual-section">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5">Why Smart AMC?</h2>
+            <div class="circle-container">
+                <div class="main-circle">
+                    <div>
+                        <div style="font-size: 32px;">AMC</div>
+                        <div style="font-size: 14px; opacity: 0.8;">VALUE CORE</div>
+                    </div>
+                </div>
+                <div class="orbit-item orbit-1">Priority Support</div>
+                <div class="orbit-item orbit-2">Cost Savings</div>
+                <div class="orbit-item orbit-3">Longer AC Life</div>
+                <div class="orbit-item orbit-4">Quarterly Check</div>
+            </div>
+            <p class="mt-5 text-secondary">Our Annual Maintenance Contract is designed to be your AC's best friend.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-4">Professional AC Services - Locally Trusted Excellence</p>
+            <div class="footer-links mb-4">
+                <a href="Homepage.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="small opacity-50">© 2026 AC Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

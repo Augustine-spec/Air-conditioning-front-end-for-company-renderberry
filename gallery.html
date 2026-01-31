@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AC Service Gallery - See our work and the impact of professional cooling maintenance.">
+    <title>Gallery - AC Services</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        :root {
+            --primary-sky-blue: #87CEEB;
+            --primary-sky-blue-dark: #5DADE2;
+            --primary-sky-blue-light: #E1F5FE;
+            --text-dark: #1e293b;
+            --bg-white: #ffffff;
+            --border-radius-xl: 24px;
+            --shadow-lg: 0 10px 30px rgba(135, 206, 235, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            line-height: 1.6;
+        }
+
+
+
+        /* Page Hero */
+        .gallery-hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-sky-blue-light) 0%, #fff 100%);
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        /* Before/After Impact Section */
+        .impact-section {
+            padding: 80px 0;
+        }
+
+        .impact-card {
+            background: white;
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .impact-images {
+            display: flex;
+            height: 300px;
+        }
+
+        .impact-img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .impact-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            padding: 4px 12px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 5px;
+        }
+
+        .impact-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .impact-badge {
+            background: #E8F5E9;
+            color: #2E7D32;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 6px 15px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Local Trust Signal */
+        .trust-section {
+            padding: 60px 0;
+            background: var(--primary-sky-blue);
+            color: white;
+            border-radius: var(--border-radius-xl);
+            margin: 40px auto;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px 0 30px;
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container d-flex flex-column">
+            <div class="d-flex w-100 align-items-center justify-content-between">
+                <div class="brand-wrapper">
+                    <a class="navbar-brand mb-0 d-flex align-items-center" href="Homepage.html">
+                        <img src="cool me air.jpg" alt="Logo" class="brand-logo me-2">
+                        <span class="brand-text">MinervaAirConditioning</span>
+                    </a>
+                    <span class="brand-tagline">
+                        <span>R</span><span>E</span><span>L</span><span>I</span><span>A</span><span>B</span><span>L</span><span>E</span><span>&nbsp;</span>
+                        <span>A</span><span>C</span><span>&nbsp;</span>
+                        <span>I</span><span>N</span><span>S</span><span>T</span><span>A</span><span>L</span><span>L</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>&nbsp;</span>
+                        <span>&</span><span>&nbsp;</span>
+                        <span>M</span><span>A</span><span>I</span><span>N</span><span>T</span><span>E</span><span>N</span><span>A</span><span>N</span><span>C</span><span>E</span>
+                    </span>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Homepage.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Why Choose Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="gallery.html">Our Work</a>
+                        </li>
+                        <li class="nav-item ms-lg-3 d-flex align-items-center">
+                            <a href="tel:6282822682" class="btn contact-btn">
+                                <i class="fas fa-phone-alt me-2"></i> Call for Similar Work
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="extra-info d-none d-lg-block">
+                📍 Serving your city 24/7 • Support: <a href="tel:6282822682"
+                    style="color: inherit; text-decoration: none;">6282822682</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1 class="hero-title">Visual Impact</h1>
+            <p class="text-secondary mx-auto" style="max-width: 600px;">We don't just fix ACs; we restore breathable air
+                and cooling efficiency. See the difference professional care makes.</p>
+        </div>
+    </section>
+
+    <!-- Before/After Cooling Impact -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-6">
+                    <div class="impact-card">
+                        <div class="impact-images">
+                            <div class="impact-img">
+                                <img src="https://images.unsplash.com/photo-1581094008164-3232824cf487?w=400&h=300&fit=crop"
+                                    class="w-100 h-100" style="filter: grayscale(1);">
+                                <span class="impact-label">DIRTY COILS</span>
+                            </div>
+                            <div class="impact-img">
+                                <img src="https://images.unsplash.com/photo-1581094008164-3232824cf487?w=400&h=300&fit=crop"
+                                    class="w-100 h-100">
+                                <span class="impact-label">DEEP CLEANED</span>
+                            </div>
+                        </div>
+                        <div class="impact-content">
+                            <span class="impact-badge">30% COOOLING BOOST</span>
+                            <h4 class="fw-bold">Deep Coil Cleaning</h4>
+                            <p class="text-secondary small">Removing dust accumulation drastically reduces compressor
+                                load and electricity bills.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6">
+                    <div class="impact-card">
+                        <div class="impact-images">
+                            <div class="impact-img">
+                                <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=400&h=300&fit=crop"
+                                    class="w-100 h-100" style="filter: sepia(1);">
+                                <span class="impact-label">CLOGGED FILTER</span>
+                            </div>
+                            <div class="impact-img">
+                                <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=400&h=300&fit=crop"
+                                    class="w-100 h-100">
+                                <span class="impact-label">HEALTHY AIR</span>
+                            </div>
+                        </div>
+                        <div class="impact-content">
+                            <span class="impact-badge">99% DUST REDUCTION</span>
+                            <h4 class="fw-bold">Filter Sterilization</h4>
+                            <p class="text-secondary small">Clean filters mean less allergies and better air throughput
+                                for faster cooling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Trust Signal -->
+    <section class="trust-section">
+        <div class="container">
+            <h2 class="fw-bold mb-4">You're in Safe Neighborhood Hands</h2>
+            <div class="d-flex flex-wrap justify-content-center">
+                <div class="trust-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    All Local Areas
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-bolt"></i>
+                    60-Min Response
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-check-circle"></i>
+                    Local Verified
+                </div>
+            </div>
+            <p class="mt-4 opacity-75">Serving homes, shops, and offices across the city with fast response support.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-4">Professional AC Services - Locally Trusted Excellence</p>
+            <div class="footer-links mb-4">
+                <a href="Homepage.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="small opacity-50">© 2026 AC Services. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

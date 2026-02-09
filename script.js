@@ -511,8 +511,40 @@ function renderAgenda() {
 
 // Initialize on load
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', renderCalendar);
+    document.addEventListener('DOMContentLoaded', () => {
+        renderCalendar();
+        initHeroSlideshow();
+    });
 } else {
     renderCalendar();
+    initHeroSlideshow();
+}
+
+/* ===================================
+   HERO SLIDESHOW LOGIC
+   =================================== */
+function initHeroSlideshow() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length === 0) return;
+
+    let currentSlide = 0;
+    const slideInterval = 3000; // 3 seconds per user request
+
+    // Ensure first slide is active
+    slides.forEach((slide, index) => {
+        if (index === 0) slide.classList.add('active');
+        else slide.classList.remove('active');
+    });
+
+    setInterval(() => {
+        // Remove active from current
+        slides[currentSlide].classList.remove('active');
+
+        // Move to next
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        // Add active to next
+        slides[currentSlide].classList.add('active');
+    }, slideInterval);
 }
 

@@ -141,8 +141,10 @@ body {
 
 .announcement-content {
     display: flex;
-    animation: scroll 30s linear infinite;
+    flex-wrap: nowrap;
+    animation: scroll 20s linear infinite;
     white-space: nowrap;
+    padding-left: 100%;
 }
 
 .announcement-content span {
@@ -167,13 +169,31 @@ body {
     color: inherit !important;
 }
 
+@media (max-width: 768px) {
+    .announcement-content span {
+        padding: 0 10px;
+        font-size: 10px;
+    }
+
+    .expert-hero-title {
+        font-size: 24px !important;
+        line-height: 1.4;
+        margin-bottom: 10px !important;
+    }
+
+    .expert-hero-subtitle {
+        font-size: 16px !important;
+        line-height: 1.5;
+    }
+}
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -219,7 +239,7 @@ body {
 }
 
 .brand-text {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 800;
     color: var(--text-dark);
     vertical-align: middle;
@@ -603,7 +623,7 @@ body {
     transition: max-height 0.3s ease;
     font-size: 12px;
     color: var(--text-grey);
-    text-align: right;
+    text-align: center;
     width: 100%;
 }
 
@@ -748,11 +768,11 @@ body {
 
 /* MAXIMUM text readability and clarity */
 .expert-hero-title {
-    font-size: 52px;
+    font-size: 42px;
     font-weight: 800;
     line-height: 1.2;
     letter-spacing: -0.5px;
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
     text-shadow:
         0 3px 12px rgba(0, 0, 0, 0.8),
@@ -788,6 +808,7 @@ body {
     /* Strong shadow for crystal clarity */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-align: left;
 }
 
 .expert-hero-actions {
@@ -3633,4 +3654,119 @@ a:hover,
 .floating-whatsapp {
     pointer-events: auto !important;
     cursor: pointer !important;
+}
+
+/* ===================================
+   COMPANY NAME HIGHLIGHT
+   =================================== */
+.company-name-highlight {
+    position: relative;
+    font-weight: 800;
+    color: #4A90E2;
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.15) 0%, rgba(74, 144, 226, 0.1) 100%);
+    padding: 2px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(135, 206, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.company-name-highlight:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(135, 206, 235, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* ===================================
+   HIGHLIGHTS SECTION TYPOGRAPHY
+   =================================== */
+.highlights-title {
+    font-size: 28px !important;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--primary-navy);
+    line-height: 1.2;
+}
+
+.highlights-subtitle {
+    font-size: 16px !important;
+    color: var(--text-grey);
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .highlights-title {
+        font-size: 24px !important;
+    }
+
+    .highlights-subtitle {
+        font-size: 14px !important;
+    }
+}
+
+/* ===================================
+   MOBILE GALLERY FIXES
+   =================================== */
+@media (max-width: 991px) {
+
+    /* Force navigation buttons to be visible on mobile */
+    .gallery-nav-btn {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 50;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        color: var(--primary-navy);
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .gallery-nav-btn.prev {
+        left: 10px;
+    }
+
+    .gallery-nav-btn.next {
+        right: 10px;
+    }
+
+    /* Reduce image/viewport size on mobile */
+    .immersive-gallery-section {
+        padding: 40px 0;
+    }
+
+    .gallery-header {
+        margin-bottom: 50px !important;
+        padding-bottom: 20px;
+    }
+
+    .gallery-viewport {
+        height: 380px !important;
+        /* Reduced from default/auto */
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .gallery-item {
+        width: 260px !important;
+        /* Slightly smaller width */
+        height: 320px !important;
+        /* Ensure fits within viewport */
+        background: #fff;
+    }
+
+    .gallery-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 12px;
+    }
 }
